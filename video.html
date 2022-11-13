@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simple Media App Sample</title>
+  <meta name="description" content="Simple Media App Sample">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/feathericon.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <div class="back">
+    <a href="/index.html">
+      <i class="fe fe-home" style="font-size: 4rem; color: white;"></i>
+    </a>
+  </div>
+  <video autoplay="autoplay">
+    <source src="https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd" type="application/dash+xml">
+  </video>
+
+  <section class="controls hideme">
+    <div class="info">
+      <p>Title</p>
+    </div>
+    <div class="videocontrols">
+      <div class="control-buttons">
+        <button class="btn">
+          <i class="fe fe-backward"></i>
+        </button>
+        <button class="btn">
+          <i class="fe fe-play"></i>
+        </button>
+        <button class="btn">
+          <i class="fe fe-forward"></i>
+        </button>
+      </div>
+      <div class="progress-bar">
+        <input type="range" name="playtime" value="0" min="0" max="100">
+      </div>
+    </div>
+    <div class="volume">
+      <div class="volume-icon">
+        <i class="fe fe-speaker"></i>
+      </div>
+      <div class="volume-bar">
+        <input class="focusable" type="range" min="0" max="100" value="100">
+      </div>
+    </div>
+  </section>
+
+  <!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/spatial_navigation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.5.1/dash.all.min.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.addEventListener('load', function () {
+      // Initialize
+      SpatialNavigation.init();
+
+      // Define navigable elements (anchors and elements with "focusable" class).
+      SpatialNavigation.add({
+        selector: 'a, .focusable, button'
+      });
+
+      // Make the *currently existing* navigable elements focusable.
+      SpatialNavigation.makeFocusable();
+
+      // Focus the first navigable element.
+      SpatialNavigation.focus();
+
+      function debounce(callback, timeout, _this) {
+        var timer;
+        return function (e) {
+          var _that = this;
+          if (timer)
+            clearTimeout(timer);
+          timer = setTimeout(function () {
+            callback.call(_this || _that, e);
+          }, timeout);
+        }
+      }
+
+      var userAction = debounce(function (e) {
+        document.querySelector('.hideme').style.cssText = 'display: none';
+        document.querySelector('.back').style.cssText = 'display: none';
+      }, 5000);
+
+      document.addEventListener("mousemove", userAction, false);
+      document.addEventListener("click", userAction, false);
+      document.addEventListener("keydown", userAction, false);
+      document.addEventListener("scroll", userAction, false);
+      (function () {
+        userAction();
+      })();
+    });
+    (function () {
+      document.onkeydown = function (evt) {
+        //evt.preventDefault();
+        evt = evt || window.event;
+        var key = evt.keyCode;
+        switch (key) {
+          case 40: //down
+            document.querySelector('.hideme').style.cssText = 'display: none';
+            document.querySelector('.back').style.cssText = 'display: none';
+            break;
+          default:
+            document.querySelector('.hideme').style.cssText = 'display: flex';
+            document.querySelector('.back').style.cssText = 'display: flex';
+            break;
+        };
+      }
+    })();
+
+    updateIntervalId = setInterval(function () {
+      const time = document.querySelector('video').currentTime;
+    }, 500);
+
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

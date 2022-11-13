@@ -1,0 +1,481 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simple Media App Sample</title>
+  <meta name="description" content="Simple Media App Sample">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/feathericon.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <div class="container">
+    <nav id="navbar">
+      <div class="navlogo">
+        <img src="icon.png" class="navlogo">
+      </div>
+      <div class="navlogo" style="width: 2%;">
+      </div>
+      <div class="navlogo" onclick="getElementById('navbar').style.color = `red`; ">
+        <i class="fe fe-search"></i>
+      </div>
+      <input type="text" placeholder="Search " class="focusable">
+    </nav>
+
+    <div id="main">
+      <section id="sidebar">
+        <ul style="padding-inline-start: 0px;">
+          <a href="/index.html" style="color: black">
+            <li style="list-style-type: none; padding: 0.2rem 0;" class="focusable">
+              <i class="fe fe-user"></i>
+            </li>
+          </a>
+          <a href="/index.html" style="color: black">
+            <li style="list-style-type: none; padding: 0.2rem 0;" class="focusable">
+              <i class="fe fe-home"></i>
+            </li>
+          </a>
+          <a href="/index.html" style="color: black">
+            <li style="list-style-type: none; padding: 0.2rem 0;" class="focusable">
+              <i class="fe fe-text-align-justify"></i>
+            </li>
+          </a>
+          <a href="/index.html" style="color: black">
+            <li style="list-style-type: none; padding: 0.2rem 0;" class="focusable">
+              <i class="fe fe-wrench"></i>
+            </li>
+          </a>
+          <a href="/index.html" style="color: black">
+            <li style="list-style-type: none; padding: 0.3rem 0;" class="focusable">
+              <i class="fe fe-logout"></i>
+            </li>
+          </a>
+        </ul>
+      </section>
+      <section id="mainsection">
+        <a href="/video.html"></a>
+        <img src="tile-wide.png" id="mainImage">
+        </a>
+      </section>
+    </div>
+    <section id="carousel1">
+      <h3 style="color: white">First Carousel</h3>
+      <div class="carousel-container">
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream1
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream2
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream3
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream4
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream5
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream6
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream7
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream8
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream9
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream10
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream11
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream12
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream13
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream14
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream15
+            </p>
+          </a>
+        </div>
+      </div>
+      <h3 style="color: yellowgreen">Second Carousel</h3>
+      <div class="carousel-container">
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream1
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream2
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream3
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream4
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream5
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream6
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream7
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream8
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream9
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream10
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream11
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream12
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream13
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream14
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream15
+            </p>
+          </a>
+        </div>
+      </div>
+      <h3 style="color: burlywood">Third Carousel</h3>
+      <div class="carousel-container">
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream1
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream2
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream3
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream4
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream5
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream6
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream7
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream8
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream9
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide2.png" tabindex="0">
+            <p>
+              stream10
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream11
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream12
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide1.png" tabindex="0">
+            <p>
+              stream13
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream14
+            </p>
+          </a>
+        </div>
+        <div class="stream-container">
+          <a href="/video.html">
+            <img src="tile-wide.png" tabindex="0">
+            <p>
+              stream15
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div style="height: 100vh;">
+    </div>
+  </div>
+
+  <!-- Add your site or application content here -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/spatial_navigation.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.addEventListener('load', function () {
+      // Initialize
+      SpatialNavigation.init();
+
+      // Define navigable elements (anchors and elements with "focusable" class).
+      SpatialNavigation.add({
+        selector: 'a, .focusable'
+      });
+
+      // Make the *currently existing* navigable elements focusable.
+      SpatialNavigation.makeFocusable();
+
+      // Focus the first navigable element.
+      SpatialNavigation.focus();
+    });
+
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
